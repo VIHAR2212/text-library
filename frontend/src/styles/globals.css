@@ -1,0 +1,208 @@
+/* ═══════════════════════════════════════════════════════════════
+   TEXT LIBRARY — FROSTED GLASS DESIGN SYSTEM
+   Exact recreation of the reference image color palette
+   ═══════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --ease-smooth: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Reference image exact color palette */
+  --blue-teal-1: #457AFF;
+  --blue-teal-2: #44D7AD;
+  --purple-1: #7838F4;
+  --purple-2: #A898FF;
+  --orange-1: #FF6B35;
+  --orange-2: #FF3CAC;
+  --pink-1: #FF3CAC;
+  --pink-2: #A855F7;
+}
+
+/* ─── DARK MODE ───────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-base: #0a0a0f;
+
+  /* Big background gradient blobs — like the colorful bottom row */
+  --bg-gradient:
+    radial-gradient(ellipse 70% 50% at 15% 85%, rgba(255,107,53,0.55) 0%, rgba(255,60,172,0.3) 40%, transparent 70%),
+    radial-gradient(ellipse 60% 45% at 50% 90%, rgba(168,85,247,0.4) 0%, rgba(120,56,244,0.25) 50%, transparent 70%),
+    radial-gradient(ellipse 65% 50% at 85% 80%, rgba(69,122,255,0.5) 0%, rgba(68,215,173,0.3) 40%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 70% 10%, rgba(120,56,244,0.2) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 20% 15%, rgba(69,122,255,0.15) 0%, transparent 55%),
+    #0a0a0f;
+
+  /* Glass card */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-hover: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-hover: rgba(255, 255, 255, 0.22);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+  --glass-shadow-hover: 0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.12);
+  --backdrop-blur: blur(20px) saturate(180%);
+
+  --text-primary: rgba(255,255,255,0.95);
+  --text-secondary: rgba(255,255,255,0.55);
+  --text-muted: rgba(255,255,255,0.28);
+
+  /* Card gradient tints — exact from reference image */
+  --card-gradient-1: linear-gradient(135deg, rgba(69,122,255,0.25) 0%, rgba(68,215,173,0.18) 100%);
+  --card-gradient-2: linear-gradient(135deg, rgba(120,56,244,0.22) 0%, rgba(168,152,255,0.16) 100%);
+  --card-gradient-3: linear-gradient(135deg, rgba(255,107,53,0.22) 0%, rgba(255,60,172,0.16) 100%);
+
+  /* Upload form gradient */
+  --upload-gradient: linear-gradient(135deg, rgba(69,122,255,0.2) 0%, rgba(120,56,244,0.18) 50%, rgba(68,215,173,0.12) 100%);
+
+  /* Primary button */
+  --btn-gradient: linear-gradient(135deg, #457AFF 0%, #7838F4 50%, #A898FF 100%);
+  --btn-shadow: 0 4px 20px rgba(69,122,255,0.45);
+  --btn-shadow-hover: 0 8px 30px rgba(120,56,244,0.55);
+
+  --accent-primary: #457AFF;
+  --accent-secondary: #A898FF;
+  --accent-success: #44D7AD;
+  --accent-warning: #FF6B35;
+
+  --scrollbar-thumb: rgba(255,255,255,0.12);
+  --scrollbar-track: rgba(255,255,255,0.03);
+
+  --input-bg: rgba(255,255,255,0.05);
+  --input-border: rgba(255,255,255,0.1);
+  --input-focus-border: #457AFF;
+  --input-focus-shadow: rgba(69,122,255,0.2);
+}
+
+/* ─── LIGHT MODE ──────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg-base: #e8eaf2;
+
+  /* Light mode — like top row of reference: soft grey with subtle color */
+  --bg-gradient:
+    radial-gradient(ellipse 70% 50% at 15% 85%, rgba(255,107,53,0.12) 0%, rgba(255,60,172,0.08) 40%, transparent 70%),
+    radial-gradient(ellipse 60% 45% at 50% 90%, rgba(168,85,247,0.10) 0%, rgba(120,56,244,0.07) 50%, transparent 70%),
+    radial-gradient(ellipse 65% 50% at 85% 80%, rgba(69,122,255,0.12) 0%, rgba(68,215,173,0.08) 40%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 60% 5%, rgba(120,56,244,0.06) 0%, transparent 55%),
+    #e8eaf2;
+
+  /* White frosted glass — like top-left card in reference */
+  --glass-bg: rgba(255, 255, 255, 0.70);
+  --glass-bg-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.90);
+  --glass-border-hover: rgba(255, 255, 255, 1);
+  --glass-shadow: 0 8px 32px rgba(100,120,200,0.10), inset 0 1px 0 rgba(255,255,255,0.9);
+  --glass-shadow-hover: 0 20px 60px rgba(100,120,200,0.18), inset 0 1px 0 rgba(255,255,255,1);
+  --backdrop-blur: blur(20px) saturate(200%);
+
+  --text-primary: rgba(10,12,30,0.90);
+  --text-secondary: rgba(10,12,30,0.50);
+  --text-muted: rgba(10,12,30,0.32);
+
+  /* Subtle tints for light cards */
+  --card-gradient-1: linear-gradient(135deg, rgba(69,122,255,0.07) 0%, rgba(68,215,173,0.05) 100%);
+  --card-gradient-2: linear-gradient(135deg, rgba(120,56,244,0.06) 0%, rgba(168,152,255,0.05) 100%);
+  --card-gradient-3: linear-gradient(135deg, rgba(255,107,53,0.07) 0%, rgba(255,60,172,0.05) 100%);
+
+  --upload-gradient: linear-gradient(135deg, rgba(69,122,255,0.07) 0%, rgba(120,56,244,0.06) 50%, rgba(68,215,173,0.04) 100%);
+
+  --btn-gradient: linear-gradient(135deg, #457AFF 0%, #7838F4 50%, #A898FF 100%);
+  --btn-shadow: 0 4px 20px rgba(69,122,255,0.30);
+  --btn-shadow-hover: 0 8px 30px rgba(120,56,244,0.38);
+
+  --accent-primary: #457AFF;
+  --accent-secondary: #7838F4;
+  --accent-success: #0db88a;
+  --accent-warning: #FF6B35;
+
+  --scrollbar-thumb: rgba(0,0,0,0.14);
+  --scrollbar-track: rgba(0,0,0,0.04);
+
+  --input-bg: rgba(255,255,255,0.6);
+  --input-border: rgba(200,205,230,0.8);
+  --input-focus-border: #457AFF;
+  --input-focus-shadow: rgba(69,122,255,0.15);
+}
+
+/* ─── BASE ────────────────────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.5s var(--ease-smooth), color 0.5s var(--ease-smooth);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle noise texture — like the middle row in reference */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+#root { position: relative; z-index: 1; }
+
+/* ─── SCROLLBAR ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-primary); }
+
+/* ─── GLASS CARD ──────────────────────────────────────────────── */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  box-shadow: var(--glass-shadow);
+  border-radius: 18px;
+  transition: background 0.3s var(--ease-smooth),
+              border-color 0.3s var(--ease-smooth),
+              box-shadow 0.3s var(--ease-smooth);
+}
+
+.glass:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* ─── TYPOGRAPHY ──────────────────────────────────────────────── */
+h1,h2,h3,h4,h5,h6 { font-family: var(--font-display); line-height: 1.15; }
+code, pre { font-family: var(--font-mono); }
+
+::selection {
+  background: rgba(69,122,255,0.28);
+  color: var(--text-primary);
+}
+
+/* ─── ANIMATIONS ──────────────────────────────────────────────── */
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes pulse-glow {
+  0%,100% { box-shadow: 0 0 20px rgba(69,122,255,0.3); }
+  50% { box-shadow: 0 0 40px rgba(120,56,244,0.5); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ─── HIGHLIGHT.JS ────────────────────────────────────────────── */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.875rem !important;
+  line-height: 1.7 !important;
+}
