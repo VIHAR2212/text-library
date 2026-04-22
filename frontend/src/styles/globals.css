@@ -29,11 +29,11 @@
 
   /* VIVID blobs — big, saturated, like the reference bottom row */
   --bg-gradient:
-    radial-gradient(ellipse 80% 60% at 10% 90%, rgba(255,107,53,0.80) 0%, rgba(255,60,172,0.55) 35%, transparent 65%),
-    radial-gradient(ellipse 70% 55% at 50% 95%, rgba(120,56,244,0.70) 0%, rgba(168,152,255,0.45) 45%, transparent 68%),
-    radial-gradient(ellipse 75% 60% at 90% 88%, rgba(69,122,255,0.75) 0%, rgba(68,215,173,0.50) 40%, transparent 65%),
-    radial-gradient(ellipse 45% 35% at 78% 5%, rgba(120,56,244,0.30) 0%, transparent 55%),
-    radial-gradient(ellipse 40% 30% at 22% 5%, rgba(69,122,255,0.25) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 60% at 10% 30%, rgba(255,107,53,0.80) 0%, rgba(255,60,172,0.55) 35%, transparent 65%),
+radial-gradient(ellipse 70% 55% at 50% 40%, rgba(120,56,244,0.70) 0%, rgba(168,152,255,0.45) 45%, transparent 68%),
+radial-gradient(ellipse 75% 60% at 90% 25%, rgba(69,122,255,0.75) 0%, rgba(68,215,173,0.50) 40%, transparent 65%),
+radial-gradient(ellipse 45% 35% at 78% 85%, rgba(120,56,244,0.30) 0%, transparent 55%),
+radial-gradient(ellipse 40% 30% at 22% 80%, rgba(69,122,255,0.25) 0%, transparent 50%),
     #05050f;
 
   /* Glass card */
