@@ -25,16 +25,16 @@
 
 /* ─── DARK MODE ───────────────────────────────────────────────── */
 [data-theme="dark"] {
-  --bg-base: #0a0a0f;
+  --bg-base: #05050f;
 
-  /* Big background gradient blobs — like the colorful bottom row */
+  /* VIVID blobs — big, saturated, like the reference bottom row */
   --bg-gradient:
-    radial-gradient(ellipse 70% 50% at 15% 85%, rgba(255,107,53,0.55) 0%, rgba(255,60,172,0.3) 40%, transparent 70%),
-    radial-gradient(ellipse 60% 45% at 50% 90%, rgba(168,85,247,0.4) 0%, rgba(120,56,244,0.25) 50%, transparent 70%),
-    radial-gradient(ellipse 65% 50% at 85% 80%, rgba(69,122,255,0.5) 0%, rgba(68,215,173,0.3) 40%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 70% 10%, rgba(120,56,244,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 35% at 20% 15%, rgba(69,122,255,0.15) 0%, transparent 55%),
-    #0a0a0f;
+    radial-gradient(ellipse 80% 60% at 10% 90%, rgba(255,107,53,0.80) 0%, rgba(255,60,172,0.55) 35%, transparent 65%),
+    radial-gradient(ellipse 70% 55% at 50% 95%, rgba(120,56,244,0.70) 0%, rgba(168,152,255,0.45) 45%, transparent 68%),
+    radial-gradient(ellipse 75% 60% at 90% 88%, rgba(69,122,255,0.75) 0%, rgba(68,215,173,0.50) 40%, transparent 65%),
+    radial-gradient(ellipse 45% 35% at 78% 5%, rgba(120,56,244,0.30) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 22% 5%, rgba(69,122,255,0.25) 0%, transparent 50%),
+    #05050f;
 
   /* Glass card */
   --glass-bg: rgba(255, 255, 255, 0.06);
@@ -78,15 +78,16 @@
 
 /* ─── LIGHT MODE ──────────────────────────────────────────────── */
 [data-theme="light"] {
-  --bg-base: #e8eaf2;
+  --bg-base: #eceef5;
 
-  /* Light mode — like top row of reference: soft grey with subtle color */
+  /* Light — soft but visible color blobs at bottom */
   --bg-gradient:
-    radial-gradient(ellipse 70% 50% at 15% 85%, rgba(255,107,53,0.12) 0%, rgba(255,60,172,0.08) 40%, transparent 70%),
-    radial-gradient(ellipse 60% 45% at 50% 90%, rgba(168,85,247,0.10) 0%, rgba(120,56,244,0.07) 50%, transparent 70%),
-    radial-gradient(ellipse 65% 50% at 85% 80%, rgba(69,122,255,0.12) 0%, rgba(68,215,173,0.08) 40%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 60% 5%, rgba(120,56,244,0.06) 0%, transparent 55%),
-    #e8eaf2;
+    radial-gradient(ellipse 80% 60% at 10% 90%, rgba(255,107,53,0.25) 0%, rgba(255,60,172,0.16) 35%, transparent 65%),
+    radial-gradient(ellipse 70% 55% at 50% 95%, rgba(120,56,244,0.20) 0%, rgba(168,152,255,0.14) 45%, transparent 68%),
+    radial-gradient(ellipse 75% 60% at 90% 88%, rgba(69,122,255,0.22) 0%, rgba(68,215,173,0.15) 40%, transparent 65%),
+    radial-gradient(ellipse 45% 35% at 78% 5%, rgba(120,56,244,0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 30% at 22% 5%, rgba(69,122,255,0.10) 0%, transparent 50%),
+    #eceef5;
 
   /* White frosted glass — like top-left card in reference */
   --glass-bg: rgba(255, 255, 255, 0.70);
@@ -141,7 +142,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle noise texture — like the middle row in reference */
+/* Subtle noise texture */
 body::before {
   content: '';
   position: fixed;
